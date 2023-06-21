@@ -1,4 +1,4 @@
-package com.plcoding.daggerhiltcourse
+package com.plcoding.daggerhiltcourse.presentation
 
 import android.app.Service
 import android.content.Intent
@@ -10,6 +10,9 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MyService: Service() {
 
+    // como não é possivel fornecer um cosntrutor a um serviço o hilt permite que seja criada uma
+    // variavel que podera que permitira o acesso ao repositorio dentro do serviço
+    // isso é chamado de field injection
     @Inject
     lateinit var repository: MyRepository
 

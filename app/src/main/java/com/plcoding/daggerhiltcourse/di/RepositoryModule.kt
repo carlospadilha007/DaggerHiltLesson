@@ -12,7 +12,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 abstract class RepositoryModule {
 
-    @Binds
+    @Binds // essa notação permite que o hilt vincule sempre MyRepository seja injetado, MyRepositoryImpl seja implementado
     @Singleton
     abstract fun bindMyRepository(
         myRepositoryImpl: MyRepositoryImpl
